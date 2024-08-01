@@ -1,0 +1,73 @@
+:host /deep/ ng2-smart-table table{
+    font-size:12px;
+    background-color:white;
+    border: 1px solid #dbdbdb;
+    }
+    :host /deep/ ng2-smart-table tbody > tr:nth-of-type(odd) {
+      background-color: #c2dceb;
+    }
+    :host /deep/ ng2-smart-table tbody > tr:nth-of-type(even) {
+      background-color: rgb(235, 235, 235);
+    }
+    :host /deep/ ng2-smart-table ng2-smart-table-pager{
+      float:right;
+      }
+      :host /deep/ ng2-smart-table ng2-smart-table-pager .ng2-smart-pagination, .ng2-smart-page-item{
+        font-size:12px;
+        }
+        :host /deep/ ng2-smart-table ng2-smart-table-pager .ng2-smart-page-link span{
+          font-size:12px;
+          
+          }
+          :host /deep/ ng2-smart-table thead  tr.ng2-smart-filters
+          th.ng2-smart-th
+          ng2-smart-table-filter
+          div.ng2-smart-filter
+          default-table-filter
+          input-filter
+          input::placeholder {
+          color: transparent !important;
+          }
+          
+    
+    :host /deep/ ng2-smart-table table input{
+      height:18px;
+      }
+  :host /deep/ ng2-smart-table tbody > tr > td > a {
+  color: #61727f;
+  }
+  :host /deep/ ng2-smart-table tbody > tr  {
+    border-bottom: 1px solid #dbdbdb;
+    font-size:12px;
+    height:12px;
+    }
+    :host /deep/ ng2-smart-table tbody > tr > td {
+      border-right: 1px solid #dbdbdb;
+      }
+    :host /deep/ ng2-smart-table thead > tr  {
+      border-bottom: 1px solid #dbdbdb;
+      }
+      :host /deep/ ng2-smart-table thead > tr > th  {
+        border-right: 1px solid #dbdbdb;
+        background: rgba(80, 160, 143, 0.829);
+        }
+ 
+   :host /deep/ ng2-smart-table a { color: #ffffff;font-size:12px;font-weight:bold }
+  :host /deep/ ng2-smart-table a:hover { color: #213fc4; }
+  :host /deep/ ng2-smart-table a:focus { color: #213fc4; }
+  :host /deep/ a.ng2-smart-page-link.page-link{
+    color: #61727f;
+  }
+  
+  :host /deep/ ng2-smart-table .ng2-smart-actions a.ng2-smart-action,
+  :host /deep/ ng2-smart-table .ng2-smart-action-custom-custom
+    { color: #000 ; 
+    margin-left:3px;
+    font-size:12px;
+    }
+
+    :host /deep/ ng2-smart-table .ng2-smart-actions {
+      color: #fff;
+      width : 75px;
+    }
+

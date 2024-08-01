@@ -1,0 +1,93 @@
+<div>
+  <!-- #00204A -->
+  <div class="row" style="margin:0px">
+    <div class="col-20" style="width:15%;height:550px;">
+        <div style="background-color: rgb(167, 70, 167)">
+            <label style="height:15px;font-weight: bold;color:white;">Team Members</label>
+        </div>
+        
+        <div style="border: 2px solid white;height:520px;overflow:auto;background-color:#c2dceb">
+          <li *ngFor="let t of teamList; let i = index" style="list-style-type: none;">
+            <div  id="empId_{{t.key1}}" (click)="getAllVisitDatesAndLocation(t.key1)" [ngClass]="{'firstColorClass': i%2==0, 'secondColorClass': i%2 !=0 }" >{{t.key2}}</div>
+          </li>
+        </div>
+    </div>
+    <div class="col-80" style="width:85%;height:550px;overflow:auto">
+
+
+
+      <!-- <router-outlet></router-outlet> -->
+
+      <div>
+          <div class="row" style="margin:0px">
+            <div class="col-20" style="width:20%" *ngIf = "visitbar == true">
+        
+              
+                <div style="background-color: rgb(167, 70, 167);text-align: center">
+                    <label style="height:15px;font-weight: bold;color:white">Visit Date&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                    </label>
+                </div>
+                <div style="border: 2px solid white;height:160px;overflow:auto;font-size:11px;background-color:#c2dceb">
+                  <li *ngFor="let v of visitDateList; let i = index" style="list-style-type: none;">
+                    <div id="vdate_{{v}}" (click)="getVisitList(v)" [ngClass]="{'firstVisitColorClass': i%2==0, 'secondVisitColorClass': i%2 !=0 }">{{v}}</div>
+                  </li>
+                </div>
+                <div style="background-color: rgb(167, 70, 167);text-align: center">
+                  <label style="height:15px;font-weight: bold;color:white">Attendance&nbsp;&nbsp;&nbsp;&nbsp;
+                      
+                  </label>
+              </div>
+              <div style="border: 2px solid white;height:160px;overflow:auto;font-size:11px;background-color:#c2dceb">
+                <li *ngFor="let att of attendanceDateList; let k = index" style="list-style-type: none;">
+                  <div id="attdate_{{att}}" (click)="getAttendanceList(att)" [ngClass]="{'firstAttendanceColorClass': k%2==0, 'secondAttendanceColorClass': k%2 !=0 }">{{att}}</div>
+                </li>
+              </div>
+              
+              <div>
+                  <div style="background-color: rgb(167, 70, 167);text-align:center">
+                      <label style="height:15px;font-weight:bold;color:white">Registered Locations</label>
+                  </div>
+                
+                <div style="border: 2px solid white;height:150px;overflow:auto;font-size:11px;background-color:#c2dceb">
+                  <li *ngFor="let m of mappedLocationList; let j = index"  style="list-style-type: none;">
+                    <div id="reg_{{m.regId}}" (click)="gotoRegisteredLocation(m,j)" title="{{m.lat}},{{m.lng}}" [ngClass]="{'firstColorLocClass': j%2==0, 'secondColorLocClass': j%2 !=0 }">{{m.locName}}</div>
+                  </li>
+                </div>
+        
+              </div>
+            </div>
+              
+            <div id = "mapViewDivId">
+               
+              <div class="row" style="margin:0px;background-color: rgb(167, 70, 167)">
+                <div class="col-30" style="width:5%">
+                      <i (click)="toggleVisitbar()" class="fa fa-bars" style="cursor: pointer;color:white"></i>
+                </div>
+                <div class="col-30" style="width:25%">
+                    <label style="height:15px;font-weight: bold;color:white">Date:&nbsp;&nbsp;{{visitDate}}</label>
+                </div>
+                <div class="col-30" style="width:30%">
+                  <label style="height:15px;font-weight: bold;color:white">Working Hrs:&nbsp;&nbsp;{{workingHrs}}</label>
+              </div>
+                <div class="col-30" style="width:15%">
+                    <label style="height:15px;font-weight: bold;color:white">Visit:&nbsp;&nbsp;{{visitNo}}</label>
+                </div>
+                <div class="col-40" style="width:25%">
+                    <label style="height:15px;font-weight: bold;color:white">Distance:&nbsp;&nbsp;{{distanceCovered/1000}}&nbsp;km</label>
+                </div>
+              </div>  
+                
+              <div style="border: 2px solid white;font-size:11px;">
+                  <div id='map' style="width:100%;height:520px">
+                    
+                    </div>
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+</div>

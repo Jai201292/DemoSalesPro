@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+  }
+  .row{
+      margin: 0px 0px 10px !important;
+  }
+  tr:last-child {
+    font-weight: bold;
+  }
+
+  th:nth-child(n+3), td:nth-child(n+3){
+    text-align: center
+  }
+  .mat-fab{
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .label-font{
+    font-size:13px;
+    font-weight: 700
+  }
+  .select-size{
+    border-radius: 12px;
+    height: 48%;
+    width: 100%;
+    font-size: 11px;
+  }
+  
+  

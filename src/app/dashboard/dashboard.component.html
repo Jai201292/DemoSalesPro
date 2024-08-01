@@ -1,0 +1,253 @@
+<div class="mainDiv">
+  <!-- #c2dceb -->
+    <mat-toolbar color='primary' class="navbar">
+      <mat-toolbar-row style="height:40px;">
+          <div class="CompanyHeading" style="vertical-align: 5px">
+            <!-- <span><i (click)="toggleSidebar()" class="fa fa-bars" style="cursor: pointer"></i></span> -->
+            <span (click)="toggleSidebar()" style="padding-top:10px;cursor: pointer;"><mat-icon>list</mat-icon></span>
+              <span>
+                  <img  src="http://www.fast.org.in/SalesProDashbord/assets/navbarHeading.png" alt="Company Name" height="40px">
+              </span>
+          </div>
+          <span class="example-spacer"></span>
+          <div class="right-toolbar">
+
+              <button  mat-icon-button class="home" routerLink="/Dashboard" >
+                  <mat-icon>home</mat-icon>
+              </button>
+              <button mat-icon-button [matMenuTriggerFor]="menu" class="Home-icon">
+                  <!-- <mat-icon matBadge="{{NumNoti}}" matBadgeColor='warn'>notification_important</mat-icon> -->
+                  <mat-icon matBadgeColor='warn'>notification_important</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" xPosition="before">
+                  <button mat-menu-item>Notification 1</button>
+                  <button mat-menu-item>Show ALL</button>
+              </mat-menu>
+              <label style="vertical-align: 5px">
+                  <span> {{tday | date}} </span>
+                  <!-- <span (click)="viewProfile()" style="cursor:pointer;" title="view profile">Hi, {{loginResponse.empName}}</span>&nbsp;&nbsp; -->
+                  <img (click)="viewProfile()" [src]="empIcon" height="30px" width="30px" style="cursor:pointer;border-radius: 50%" />
+                  &nbsp;&nbsp;
+                  <i class=" fa fa-sign-out" (click)="logout()" style="cursor:pointer;" title="logout"> </i>
+                </label>
+
+              
+          </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+     <!-- <h3>SALES PRO <i (click)="toggleSidebar()" class="fa fa-bars" style="cursor: pointer"></i></h3> -->
+        <!-- <span><i class="fa fa-bars"></i></span> -->
+    <!--<div class="row">
+      <div style="width:30%;font-weight:bolder;padding:1%;font-family: 'Times New Roman', Times, serif">
+        <img height="40px" src="http://www.fast.org.in/SalesProDashbord/assets/navbarHeading.png" />
+      </div>
+      <div style="width:70%;">
+        <mat-toolbar color='primary' class="navbar">
+          <mat-toolbar-row>
+            <div style="float:right;">
+              <button style="background:transparent;border:0px;color:white" mat-icon-button class="home" routerLink="/Dashboard" (click)="setDefault(); slidemenu= false; ActiveRoute=''">
+                <mat-icon>home</mat-icon>
+              </button>
+              <button style="background:transparent;border:0px;color:white" mat-icon-button [matMenuTriggerFor]="menu" class="Home-icon">
+                <mat-icon matBadge="{{NumNoti}}" matBadgeColor='warn'>notification_important</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item>Notification 1</button>
+                <button mat-menu-item>Show ALL</button>
+              </mat-menu>
+
+              <span style="color:white"> {{tday | date}} </span>
+            </div>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </div>
+    </div>-->
+
+  <body style="width:100%;">
+    <div class="row">
+      <!--<section>
+          <div class="SidebarIcons">
+              <div class="UpperIcons">
+                  <a href="https://www.trinityapplab.com/" target="_blank"><img src="http://www.fast.org.in/SalesProDashbord/assets/TrinityLogo.svg" alt="Company Logo" width="60%"></a>
+                  <h6 style="font-size: 0.7em;">SALESPRO</h6>
+                  <a (click)="OpenDialog()" style="cursor: pointer;"><img src="http://www.fast.org.in/SalesProDashbord/assets/ProfileView.svg" alt="ProfileView Icon" width="60%"></a>
+              </div>  
+  
+              <div class="LowerIcons">
+                  <div (click)="setDefault(); leaves = true; clicknavigate('leaves'); ActiveRoute='LEAVES'" [class.active]='leaves' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/Leaves.svg" alt="Leaves Data" width="18%">
+                      <h6>Leaves</h6>
+                  </div>
+  
+                  <div (click)="setDefault(); attendance = true; clicknavigate('attendance'); ActiveRoute='ATTENDANCE'" [class.active]='attendance' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/Attendance.svg" alt="Attendance Data" width="18%">
+                      <h6>Attendance</h6>
+                  </div>
+  
+                  <div (click)="setDefault(); outlet = true; clicknavigate('Outlet'); ActiveRoute='OUTLET'" [class.active]='outlet' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/Outlet.svg" alt="Outlet Data" width="18%">
+                      <h6>Outlet</h6>
+                  </div>
+  
+                  <div (click)="setDefault(); pjp = true; clicknavigate('pjp'); ActiveRoute='PJP'" [class.active]='pjp' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/PJP.svg" alt="PJP Data" width="18%">
+                      <h6>PJP</h6>
+                  </div>
+  
+                  <div (click)="setDefault(); mapping = true; clicknavigate('mapping'); ActiveRoute='MAPPING'" [class.active]='mapping' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/Mapping.svg" alt="KPI Data" width="18%">
+                      <h6>Mapping</h6>
+                  </div>
+  
+                  <div (click)="setDefault(); kpi = true; clicknavigate('kpi'); ActiveRoute='KPI'" [class.active]='kpi' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/KPI.svg" alt="KPI Data" width="18%">
+                      <h6>KPI</h6>
+                  </div>
+  
+                  <div (click)="setDefault(); help = true; clicknavigate('help'); ActiveRoute='HELP'" [class.active]='help' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/Help.svg" alt="Help Data" width="18%">
+                      <h6>Help</h6>
+                  </div>
+  
+                  <div (click)="setDefault(); mapview = true; clicknavigate('mapview'); ActiveRoute='MAPVIEW'" [class.active]='mapview' matRipple>
+                      <img src="http://www.fast.org.in/SalesProDashbord/assets/MapView.svg" alt="MapView Data" width="18%">
+                      <h6>MapView</h6>
+                  </div>
+              </div>             
+          </div>
+  
+        </section>-->
+     <div class="col-20 sidebarClass" id="sidebarId" *ngIf="isSidebarVisible">
+        <ul>
+          <li *ngFor="let m of menulist">
+              <mat-icon>{{m.menuIcon}}</mat-icon>
+            <span style="vertical-align:5px;padding-left:5px">{{m.menuName}}</span>
+            <ul>
+              <li *ngFor="let a of m.activity"  [routerLinkActive] = '["ActiveRoute"]' >
+                <a style="color:white" [id]='a.id'  [routerLink]="a.routerPath">{{a.activityName}}</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+              <mat-icon>fmd_good</mat-icon>
+              <span style="vertical-align:5px;padding-left:5px">MapView</span>
+            <ul>
+              <li [routerLinkActive] = '["ActiveRoute"]' >
+                <a style="color:white" id='mapview' routerLink="mapView">Track Team's Visit</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col-80 routerOutletClass" id="routerOutletId">
+
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </body>
+  <footer class="text-center" style="background-color: black;width:100%;color:white">
+    <span>Copyright@2020</span>
+  </footer>
+</div>
+
+
+
+<div class="col-sm-12">
+  <div class="modal fade" id="modelWindow1" role="dialog">
+    <div class="modal-dialog modal-sm vertical-align-center">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color:#337ab7">
+          <h4 style="color:white;padding-left:40%">View Profile
+          </h4>
+
+        </div>
+        <div class="modal-body" style="background-color:rgb(252, 252, 252);height:300px;overflow: auto">
+          <div class="container">
+
+            <form>
+              <div class="row">
+                <div class="col-50" style="width:50%">
+                 
+                  <div class="row">
+                    <div class="col-25" style="width:30%;font-weight: bold">
+                      <label for="empName">Name</label>
+                    </div>
+                    <div class="col-75" style="width:70%">
+                      <label>{{loginResponse.empName}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25" style="width:30%;font-weight: bold">
+                      <label for="mobNo">Contact Number</label>
+                    </div>
+                    <div class="col-75" style="width:70%">
+                      <label>{{loginResponse.mobile}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25" style="width:30%;font-weight: bold">
+                      <label for="role">Role</label>
+                    </div>
+                    <div class="col-75" style="width:70%">
+                      <label>{{loginResponse.empRole}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25" style="width:30%;font-weight: bold">
+                      <label for="emailId">Email Id</label>
+                    </div>
+                    <div class="col-75" style="width:70%">
+                      <label>{{loginResponse.emailId}}</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-50" style="width:50%;float:right">
+                  <div class="row">
+                    <div class="col-35" style="width:35%;font-weight: bold">
+                      <label for="rmId">RM Name</label>
+                    </div>
+                    <div class="col-65" style="width:65%">
+                      <label>{{loginResponse.rmName}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-35" style="width:35%;font-weight: bold">
+                      <label for="rmId">RM Mobile</label>
+                    </div>
+                    <div class="col-65" style="width:65%">
+                      <label>{{loginResponse.rmMobile}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-35" style="width:35%;font-weight: bold">
+                      <label for="rmId">RM Email</label>
+                    </div>
+                    <div class="col-65" style="width:65%">
+                      <label>{{loginResponse.rmEmailId}}</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-35" style="width:35%;font-weight: bold">
+                      <label for="rmId">Company</label>
+                    </div>
+                    <div class="col-65" style="width:65%">
+                      <label>{{loginResponse.company}}</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+           
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default" style="color:white;background-color: #e7963b">CLOSE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngx-spinner></ngx-spinner>

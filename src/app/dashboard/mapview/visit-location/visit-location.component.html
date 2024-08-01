@@ -1,0 +1,66 @@
+<div>
+  <div class="row" style="margin:0px">
+    <div class="col-20" style="width:20%" *ngIf = "visitbar == true">
+
+      
+        <div style="background-color: rgb(167, 70, 167);text-align: center">
+            <label style="height:15px;font-weight: bold;color:white">Visit Date&nbsp;&nbsp;&nbsp;&nbsp;
+                
+            </label>
+        </div>
+        <div style="border: 2px solid white;height:248px;overflow:auto;font-size:11px">
+          <li *ngFor="let v of visitDateList; let i = index" style="list-style-type: none;">
+            <div id="vdate_{{v}}" (click)="getVisitList(v)" [ngClass]="{'firstColorClass': i%2==0, 'secondColorClass': i%2 !=0 }">{{v}}</div>
+          </li>
+        </div>
+
+      
+      <div  >
+          <div style="background-color: rgb(167, 70, 167);text-align:center">
+              <label style="height:15px;font-weight:bold;color:white">Registered Locations</label>
+          </div>
+        
+        <div style="border: 2px solid white;height:250px;overflow:auto;font-size:11px">
+          <li *ngFor="let m of mappedLocationList; let j = index"  style="list-style-type: none;">
+            <div id="reg_{{m.regId}}" (click)="gotoRegisteredLocation(m,j)" title="{{m.lat}},{{m.lng}}" [ngClass]="{'firstColorLocClass': j%2==0, 'secondColorLocClass': j%2 !=0 }">{{m.locName}}</div>
+          </li>
+        </div>
+
+      </div>
+    </div>
+      
+    <div id = "mapViewDivId">
+       
+      <div class="row" style="margin:0px;background-color: rgb(167, 70, 167)">
+        <div class="col-30" style="width:5%">
+              <i (click)="toggleVisitbar()" class="fa fa-bars" style="cursor: pointer;color:white"></i>
+        </div>
+        <div class="col-30" style="width:30%">
+            <label style="height:15px;font-weight: bold;color:white">Chosen Date:&nbsp;&nbsp;{{visitDate}}</label>
+        </div>
+        <div class="col-30" style="width:25%">
+            <label style="height:15px;font-weight: bold;color:white">Total Visit:&nbsp;&nbsp;{{visitNo}}</label>
+        </div>
+        <div class="col-40" style="width:30%">
+            <label style="height:15px;font-weight: bold;color:white">Distance Covered:</label>
+        </div>
+      </div>  
+        
+      <div style="border: 2px solid white;font-size:11px;">
+          <div id='map' style="width:100%;height:520px">
+            
+            </div>
+            <!-- 28.687559, 77.280364 -->
+            <!-- <agm-map  [latitude] = 'lat' [longitude] = 'lng' [zoom]="zoom" >        
+              <agm-marker  latitude="28.694808" longitude="77.266775"></agm-marker>
+          </agm-map> -->
+          <!-- <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng">
+            <agm-marker  [latitude]="lat" [longitude]="lng"></agm-marker>
+          </agm-map>
+          <agm-map [latitude]="lat1" [zoom]="zoom" [longitude]="lng1">
+            <agm-marker  [latitude]="lat1" [longitude]="lng1"></agm-marker>
+          </agm-map> -->
+      </div>
+    </div>
+  </div>
+</div>

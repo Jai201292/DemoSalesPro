@@ -1,0 +1,54 @@
+<div>
+  <div style="background-image:linear-gradient(rgba(13, 53, 139, 0.986), rgba(0, 119, 255, 0.432))">
+    <div class="col-sm-12" style="font-size: 20px;font-weight: bold">
+      <label style="padding-left:10px;color:#fff">Dealer/Distributor Mapping
+        <hr style="margin-top:2px;margin-bottom:0px;background-color: #ffbd07">
+      </label>
+    </div>
+    <div class="col-sm-12" style="padding-bottom:20px">
+      <div class="row" style="margin:0px">
+        <div class="col-sm-2">
+          <label style="color:white;font-size:13px">Category</label>
+          <select  [(ngModel)]="category" class="form-control" style="border-radius:12px;height:45%;width:100%;font-size:11px">
+            <option value = "" disabled = true>Select</option>
+            <option value = "All">All</option>
+            <option *ngFor = "let c of categoryList" [value] = "c">{{c}}</option> 
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <label style="color:white;font-size:13px">Territory Name</label>
+          <select  [(ngModel)]="territoryCode" class="form-control" style="border-radius:12px;height:45%;width:100%;font-size:11px">
+            <option value = ""disabled = true>Select</option>
+            <option *ngFor = "let t of territoryList" [value] = "t.territoryCode">{{t.territoryName}}</option> 
+            <option value = "">All</option>
+          </select>
+        </div>
+       
+       
+        <div class="col-sm-4">
+          <label  style="font-size:11px;margin:2px">&nbsp;</label>
+          <div class="row">
+            <input [disabled]="category == ''" (click) = "applyfilterData()"  type="button" value="Apply Filter" style="border-radius:12px;height:100%;width:45%;font-size:13px;padding:5px;background-color: #FFBD5B;color:white" />
+            <button  style="margin-left:5%;float:right;border-radius:12px;height:100%;width:45%;font-size:13px;padding:5px;background-color: #FFBD5B;color:white">
+                <i class="fa fa-download" style="color:white;font-size:15px"></i>&nbsp;Export
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+     
+    </div>
+  
+  </div>
+  
+  <div class="col-sm-12" style="padding:0px;overflow-x: scroll;">
+    <div class="smart-table-container" style="width: 1700px;">
+        <ng2-smart-table [settings]="settings" [source]="dealerList" >
+        </ng2-smart-table>
+    </div>
+</div>
+
+</div>
+
+<ngx-spinner></ngx-spinner>

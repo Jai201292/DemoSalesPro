@@ -1,0 +1,15 @@
+<div mat-dialog-content>
+    <!-- <div *ngFor="let d of pendingVisitData">{{d.name}}-{{d.plan_date}}</div> -->
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th> 
+        </tr>
+        <tr *ngFor="let d of pendingVisitData">
+            <td>{{d.regName}}</td>
+        </tr>
+    </table>
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+</div>

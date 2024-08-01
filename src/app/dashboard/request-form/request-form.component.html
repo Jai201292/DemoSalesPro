@@ -1,0 +1,74 @@
+<div>
+  <div style="background-image:linear-gradient(rgba(13, 53, 139, 0.986), rgba(0, 119, 255, 0.432))">
+    <div class="col-sm-12" style="font-size: 20px;font-weight: bold">
+      <label style="padding-left:10px;color:#fff">Raise Complaint
+        <hr style="margin-top:2px;margin-bottom:0px;background-color: #ffbd07">
+      </label>
+    </div>
+  </div>
+
+  <form id="requestFormId" >
+      <div class="row" style="margin:2%">
+          <div class="col-25" style="width:25%;padding-left:5%">
+            <label>Lead Type:</label>
+          </div>
+          <div class="col-60" style="width:60%;padding-left:10%">
+            <select (change)="getLeadName()" [(ngModel)]="leadType" class="form-control" name="leadType">
+                <option value = "" disabled = true>Select </option>
+                <option *ngFor="let ltype of leadTypeList">{{ltype}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" style="margin:2%">
+            <div class="col-25" style="width:25%;padding-left:5%">
+              <label>Lead Name:</label>
+            </div>
+            <div class="col-60" style="width:60%;padding-left:10%">
+              <select [(ngModel)]="leadName" class="form-control" name="leadName">
+                  <option value = "" disabled = true>Select </option>
+                  <option *ngFor="let lName of leadNameList">{{lName}}</option>
+              </select>
+            </div>
+          </div>
+    <div class="row" style="margin:2%">
+      <div class="col-25" style="width:25%;padding-left:5%">
+        <label>Category:</label>
+      </div>
+      <div class="col-60" style="width:60%;padding-left:10%">
+        <select (change) = "getSubCategoryList()" [(ngModel)]="category" class="form-control" name="category">
+            <option value = "" disabled = true>Select </option>
+            <option *ngFor="let cat of categoryList">{{cat}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row" style="margin:2%">
+      <div class="col-25" style="width:25%;padding-left:5%">
+        <label>Sub Category:</label>
+      </div>
+      <div class="col-60" style="width:60%;padding-left:10%">
+          <select [(ngModel)]="subCategory" class="form-control" name="subCategory">
+              <option value = "" disabled = true>Select</option>
+              <option *ngFor="let subCat of subCategoryList">{{subCat}}</option>
+          </select>
+      </div>
+    </div>
+    
+    <div class="row" style="margin:2%">
+      <div class="col-25" style="width:25%;padding-left:5%">
+        <label>Remarks:</label>
+      </div>
+      <div class="col-60" style="width:60%;padding-left:10%">
+        <textarea [(ngModel)]="remarks" class="form-control" rows="5" cols="75" name="remarks">
+          </textarea>
+      </div>
+    </div>
+    <div class="row" style="margin:2%">
+      <div class="col-25" style="width:25%;">
+       
+      </div>
+      <div class="col-60" style="width:60%;padding-left:10%">
+        <input (click)="submitForm()" type="button" value="Submit" class="form-control" style="border-radius:12px;height:100%;width:45%;font-size:13px;padding:5px;background-color: #FFBD5B;color:white"/>
+      </div>
+    </div>
+  </form>
+</div>

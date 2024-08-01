@@ -1,0 +1,44 @@
+<body>
+    <div style="color:white;width:60%;height:657px">
+        <div style="color:white;padding:50px;width:70%">
+            <h1 style="font-size: 2cm;">SALES PRO</h1>
+            <p style="padding-top:30px">
+                One-Stop application for the field team to maintain records of visits, leaves,
+                approvals on travel reimbursement, attendance, KPI, TT management and many more
+            </p>
+        </div>
+
+        <div style="padding-left:50px;width:70%">
+            <form #authenticateForm="ngForm" (ngSubmit)="sumbitLoginForm()" novalidate>
+                <div style="text-align: center">
+                    <div style="color:rgb(255, 253, 255);" class="col-sm-12">
+                        <h4>Sign In</h4>
+                        <span style="font-size: 12px">Sign in to continue our application</span>
+                    </div>
+                    <br>
+                    <div class="col-sm-12" style="margin-bottom:20px">
+                        <input type="text" style="border-radius: 10px" placeholder="User Id" class="form-control"  name="empId" [(ngModel)]="loginRequest.empId"
+                        />
+                    </div>
+                    <div class="col-sm-12" style="margin-bottom:10px">
+                        <input type="password" style="border-radius: 10px" placeholder="Password" class="form-control"  name="password" [(ngModel)]="loginRequest.empPassword"
+                        />
+                    </div>
+                    <div class="col-sm-12" style="margin-bottom:50px">
+                        <a href='#' style="color:white;float:right">Forgot Password?</a>
+                    </div>
+                    <div class="col-sm-12">
+                        <input type="submit" class="form-control signInClass" value="SIGN IN" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div>
+        <ngx-spinner></ngx-spinner>
+
+    </div>
+</body>

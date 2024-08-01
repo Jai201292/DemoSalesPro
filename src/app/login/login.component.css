@@ -1,0 +1,90 @@
+  body{
+    
+    background: url('http://www.trinityapplab.in/images/header-slide-2.png');
+    background-repeat: no-repeat;
+    background-size: 40% 100%;
+    background-color: #846cc7ce;
+    background-position: right;
+} 
+
+.user-avatar
+{
+    width: 96px;
+    height: 90px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.signInClass{
+    color: white;
+    width: 100%;
+    height: 46.5px;
+    border-radius: 23.3px;
+    box-shadow: 0px 5px 19px 0 rgba(235, 149, 53, 0.64);
+    background-color: #e7963b;
+} 
+
+
+ .col-30{
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+  }
+  .col-20{
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+  } 
+  .col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+  } 
+  .col-100 {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+  } 
+  a{
+    float:right;
+  }
+  .mainDiv{
+    padding-top:150px;
+    padding-bottom:180px;
+  }
+
+  @media screen and (min-height: 1000px) {
+    .mainDiv{
+        padding-top:300px;
+        padding-bottom:180px;
+      } 
+  }
+  @media screen and (max-width: 600px) {
+   
+    h5 {
+      font-size:15px;
+    }
+    a{
+       font-size:11px;
+        float:unset; 
+        padding-left:20%;
+       
+    }
+    .col-100{
+        font-size:11px;
+    }
+    .signInClass{
+        height: 30.5px;
+        border-radius: 16.3px;
+        font-size:12px;
+    }
+}
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } 
+ 

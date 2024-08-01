@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-button-wrapper{
+    padding: 0px !important;
+  }
+table.kpiTable thead tr th{
+    font-weight: 700 !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+    /* width: 10px !important; */
+    /* max-width: 10px !important; */
+    /* word-wrap: break-word !important; */
+  }
+
+.ng2-smart-actions .ng2-smart-action-custom-custom{
+    margin-left: 5px !important;
+}
+
+.sidebarClass ul li ul li.ActiveRoute{
+    font-weight: bold;
+}
+

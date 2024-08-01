@@ -1,0 +1,53 @@
+agm-map {
+    height: 500px;
+   }
+
+   .col-80{
+       width : 80%;
+   }
+
+   .col-100{
+    width : 100%;
+    }
+
+    .firstColorClass{
+        background-color: #c2dceb;
+        cursor: pointer;
+        text-align: center;
+    }
+    .firstColorClass:hover{
+        font-weight: bold;
+    }
+    
+    .secondColorClass{
+        background-color: rgb(235, 235, 235);
+        cursor: pointer;
+        text-align: center;
+    }
+    .secondColorClass:hover{
+        font-weight: bold;
+    }
+
+    .visitDateClass{
+        font-weight: bold;
+    }
+
+    .firstColorLocClass{
+        background-color: #c2dceb;
+        cursor: pointer;
+    }
+    
+    .firstColorLocClass:hover{
+        font-weight: bold;
+    }
+    .secondColorLocClass{
+        background-color: rgb(235, 235, 235);
+        cursor: pointer;
+    }
+    .secondColorLocClass:hover{
+        font-weight: bold;
+    }
+
+    .regLocClass{
+        font-weight: bold;
+    }

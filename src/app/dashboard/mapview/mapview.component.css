@@ -1,0 +1,87 @@
+agm-map {
+    height: 500px;
+   }
+
+   .col-80{
+       width : 80%;
+   }
+
+   .col-100{
+    width : 100%;
+    }
+
+.firstColorClass{
+    background-color: #c2dceb;
+    cursor: pointer;
+}
+
+.secondColorClass{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+.TeamDivClass{
+    font-weight: bold;
+}
+
+.firstVisitColorClass{
+    background-color: #c2dceb;
+    cursor: pointer;
+    text-align: center;
+}
+.firstVisitColorClass:hover{
+    font-weight: bold;
+}
+.visitDateClass{
+    font-weight: bold;
+}
+
+.firstColorLocClass{
+    background-color: #c2dceb;
+    cursor: pointer;
+}
+
+.firstColorLocClass:hover{
+    font-weight: bold;
+}
+.secondColorLocClass{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+.secondColorLocClass:hover{
+    font-weight: bold;
+}
+
+.regLocClass{
+    font-weight: bold;
+}
+
+.secondVisitColorClass{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+    text-align: center;
+}
+.secondVisitColorClass:hover{
+    font-weight: bold;
+}
+
+.attendanceDateClass{
+    font-weight: bold;
+}
+
+.firstAttendanceColorClass{
+    background-color: #c2dceb;
+    cursor: pointer;
+    text-align: center;
+}
+.firstAttendanceColorClass:hover{
+    font-weight: bold;
+}
+
+.secondAttendanceColorClass{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+    text-align: center;
+}
+.secondAttendanceColorClass:hover{
+    font-weight: bold;
+}
